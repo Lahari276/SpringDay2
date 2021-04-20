@@ -19,7 +19,7 @@ public class Tyre {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "tyre brand = "+ brand;
+		return "brand = "+ brand;
 				//super.toString();
 	}
 
