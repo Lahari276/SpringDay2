@@ -10,7 +10,8 @@ String name;
 		return name;
 	}
 
-	public void setName(String name) {
+	public String setName(String name) {
 		this.name = name;
+		return "returning--"+name;
 	}
 }
