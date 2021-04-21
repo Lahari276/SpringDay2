@@ -11,8 +11,8 @@ String name;
 		throw new RuntimeException();
 	}
 
-	public void setName(String name) {
+	public String setName(String name) {
 		this.name = name;
-		//return "returning--"+name;
+		return "returning--"+name;
 	}
 }
