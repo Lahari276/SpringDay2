@@ -56,10 +56,14 @@ public class LoggingAspect {
 		System.out.println("advice after exception is thrown"+name);
 	}
 	
-	@AfterReturning(pointcut="args(name)", returning="returnString")
+	/*@AfterReturning(pointcut="args(name)", returning="returnString")
 	public void StringArgsMethods(String name,String returnString) {
 		System.out.println("i/p String ="+name +"\n o/p String="+returnString);
-	}
+	}*/
+	@AfterReturning(pointcut = "args(name)", returning = "ex")
+	public void exceptionAdvice(String name, RuntimeException ex)
+			{ System.out.println("exception being thrown is "+ ex);}
+	
 	@Pointcut("execution(* aop..*.get*())")
 	public void allGetters() {}
 

@@ -7,11 +7,12 @@ String name;
 
 
 	public String getName() {
-		return name;
+		//return name;
+		throw new RuntimeException();
 	}
 
-	public String setName(String name) {
+	public void setName(String name) {
 		this.name = name;
-		return "returning--"+name;
+		//return "returning--"+name;
 	}
 }
