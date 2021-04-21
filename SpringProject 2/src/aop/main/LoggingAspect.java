@@ -5,6 +5,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
+import aop.model.Circle;
+
 @Aspect
 public class LoggingAspect {
 	//one aspect can contain multiple advices
@@ -27,13 +29,14 @@ public class LoggingAspect {
 	public void loggingAdvice(JoinPoint joinPoint) {
 		String methodName = joinPoint.toLongString();
 		if(methodName.contains("getDia")) {
+			Circle circle = (Circle) joinPoint.getTarget();
+			System.out.println(circle.getName());
 		System.out.println("writing log for getdia method b4 its executed");
 		}
 		else 
 			if(methodName.contains("setName")) {
 				System.out.println("writing log for setName method b4 its executed");
 
-				
 			}
 	}
 
