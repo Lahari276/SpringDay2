@@ -6,16 +6,16 @@ public class Circle {
 	
 	public String getName() {
 		//throw new RuntimeException();
-
+		System.out.println("circles getter method");
 		return name;
 		
 	}
 
-	public String setName(String name) {
+	public void setName(String name) {
 		System.out.println("setting name for the circle");
-		return this.name = name;
+		 this.name = name;
+		throw new RuntimeException();
 
-		
 	}
 	
 	public int getDia() {
