@@ -7,8 +7,8 @@ String name;
 
 
 	public String getName() {
-		//return name;
-		throw new RuntimeException();
+		return name;
+		//throw new RuntimeException();
 	}
 
 	public String setName(String name) {

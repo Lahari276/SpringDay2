@@ -5,16 +5,15 @@ public class Circle {
 	//public Circle() {System.out.println("in circle constructor");}
 	
 	public String getName() {
-		throw new RuntimeException();
+		//throw new RuntimeException();
 
-		//return name;
+		return name;
 		
 	}
 
-	public void setName(String name) {
+	public String setName(String name) {
 		System.out.println("setting name for the circle");
-		this.name = name;
-		throw new RuntimeException();
+		return this.name = name;
 
 		
 	}
